@@ -17,9 +17,9 @@ aar与jar不同，不像是jar里面只有class文件一样，还有so文件，�
     makeJar.dependsOn(build)
 ```
 sync(同步)完之后，使用命令行或者使用可视化gradle task来执行上面创建的任务(makeJar)。<br/>
-使用可视化任务列表更为可观<img src="https://github.com/ZQiang94/3rdLib2Depend/blob/master/imgs/img1.png"/>
+使用可视化任务列表更为可观<img src="https://github.com/ZQiang94/3rdLib2Depend/blob/master/imgs/img1.png"/><img src="https://github.com/ZQiang94/3rdLib2Depend/blob/master/imgs/img2.png"/>
 到build/libs/中查看生成的jar
-<img src="https://github.com/ZQiang94/3rdLib2Depend/blob/master/imgs/img2.png"/>
+<img src="https://github.com/ZQiang94/3rdLib2Depend/blob/master/imgs/img3.png"/>
 这个jar就是执行task之后生成的指定name的jar，可以直接使用。下面就是如何使用这个jar。
 ####导入jar
 1.拷贝到工程的libs目录；<br/>
