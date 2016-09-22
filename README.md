@@ -4,7 +4,7 @@
 aar与jar不同，不像是jar里面只有class文件一样，还有so文件，资源文件和第三方库文件等等，其实就是一个压缩文件。
 ####生成jar-使用gradle task来生成一个jar文件
 在module的build.gradle文件中创建任务，如图：
-<img src='img0.png'/>
+<img src='https://github.com/ZQiang94/3rdLib2Depend/blob/master/imgs/img0.png'/>
 具体代码：
 ```javascript
     task makeJar(type: Copy) {
@@ -17,7 +17,7 @@ aar与jar不同，不像是jar里面只有class文件一样，还有so文件，�
     makeJar.dependsOn(build)
 ```
 sync(同步)完之后，使用命令行或者使用可视化gradle task来执行上面创建的任务(makeJar)。<br/>
-使用可视化任务列表更为可观，<img src="https://github.com/ZQiang94/3rdLib2Depend/blob/master/imgs/img0.png"/><img src="https://github.com/ZQiang94/3rdLib2Depend/blob/master/imgs/img1.png"/>
+使用可视化任务列表更为可观<img src="https://github.com/ZQiang94/3rdLib2Depend/blob/master/imgs/img1.png"/>
 到build/libs/中查看生成的jar
 <img src="https://github.com/ZQiang94/3rdLib2Depend/blob/master/imgs/img2.png"/>
 这个jar就是执行task之后生成的指定name的jar，可以直接使用。下面就是如何使用这个jar。
