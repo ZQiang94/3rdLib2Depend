@@ -1,0 +1,18 @@
+apply plugin: 'java'
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+task makeJar(type: Copy) {
+    delete 'build/libs/mysdk.jar'
+    from('build/intermediates/bundles/release/')
+    into('build/libs/')
+    include('classes.jar')
+    rename ('classes.jar', 'mysdk.jar')
+}
+
+makeJar.dependsOn(build)
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
