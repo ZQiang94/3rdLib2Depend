@@ -39,7 +39,7 @@ compile(name: 'selflibrary-release', ext: 'aar')
 ```
 其中selflibrary-release要与你的libs下的aar文件名称一致。
 ####小结
-Gradle 的一些基本依赖配置方式如下：
+Gradle 的一些基本依赖配置方式如下：<br/>
 compile fileTree(dir: 'xxx', include: ['*.jar', "*.xxx"])：将某个目录下所有符合扩展名的文件作为依赖；<br/>
 compile 'com.xx.xx:ProjectName:Version'：配置Maven` 库作为依赖；在 Maven 库中心 可以搜索自己想用的库进行依赖；<br/>
 compile project(':AnotherModule')：配置另一个 Module 作为本 Module 的依赖，被依赖的 Module 必须被导入到当前工程中；<br/>
